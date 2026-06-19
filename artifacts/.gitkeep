@@ -1,0 +1,2 @@
+# Keep this directory tracked even when empty.
+# Trained model artifacts go in here but are gitignored.
