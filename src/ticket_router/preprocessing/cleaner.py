@@ -1,4 +1,10 @@
-"""Text cleaning utilities. Implemented on Day 4."""
+"""Text cleaning utilities for support ticket NLP.
+
+Public API:
+    clean_text(text) -> str
+        Lowercase, strip HTML / URLs / emails, collapse whitespace.
+        Raises TypeError if input is not a str.
+"""
 
 from __future__ import annotations
 
@@ -10,15 +16,28 @@ _EMAIL_RE = re.compile(r"\b[\w.-]+@[\w.-]+\.\w+\b")
 _WS_RE = re.compile(r"\s+")
 
 
-def clean_text(text: str) -> str:
-    """Lowercase, strip HTML/URLs/emails, collapse whitespace.
+def remove_html(text: str) -> str:
+    return _HTML_RE.sub(" ", text)
 
-    Implementation is finalized on Day 4. Placeholder keeps the import working
-    so other modules can be wired up incrementally.
-    """
+
+def remove_urls(text: str) -> str:
+    return _URL_RE.sub(" ", text)
+
+
+def remove_emails(text: str) -> str:
+    return _EMAIL_RE.sub(" ", text)
+
+
+def normalize_whitespace(text: str) -> str:
+    return _WS_RE.sub(" ", text).strip()
+
+
+def clean_text(text: str) -> str:
+    if not isinstance(text, str):
+        raise TypeError(f"clean_text expects str, got {type(text).__name__}")
     text = text.lower()
-    text = _HTML_RE.sub(" ", text)
-    text = _URL_RE.sub(" ", text)
-    text = _EMAIL_RE.sub(" ", text)
-    text = _WS_RE.sub(" ", text).strip()
+    text = remove_html(text)
+    text = remove_urls(text)
+    text = remove_emails(text)
+    text = normalize_whitespace(text)
     return text
