@@ -9,6 +9,7 @@ __pycache__/
 artifacts/*.joblib
 artifacts/*.pkl
 data/raw/
+data/processed/*.csv
 .env
 .env.local
 *.egg-info/
