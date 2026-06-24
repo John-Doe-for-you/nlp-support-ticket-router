@@ -286,11 +286,13 @@ htmlcov/
 
 ## 12. Session recovery prompt (paste into new chats)
 
-```
 We're building the NLP Support Ticket Router.
 - Repo: github.com/John-Doe-for-you/nlp-support-ticket-router
-- Local: C:\Users\ronak\support-ticket-router
 - Full plan: docs/PROJECT_PLAN.md in the repo
 - Last commit: <paste output of `git log -1`>
 Today is Day X. Continue from there.
-```
+
+**Collaboration notes:** This is a codespaces-based project with 2 contributors.
+Always `git pull` before starting a session. Commit and push at the end of each
+session so the other person can pull the latest. After pulling, check
+`git log -1 --oneline` and re-read the plan to realign.
