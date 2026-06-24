@@ -1,0 +1,53 @@
+{
+  "day": 6,
+  "chosen_scheme": "balanced",
+  "rationale": "Inverse-frequency weighting is the right starting point for a 5.5x imbalance. We keep capped@4 and effective_n variants as Day 8 fallbacks.",
+  "counts": {
+    "Billing": 3437,
+    "Authentication": 5415,
+    "Bug Report": 10043,
+    "Feature Request": 3489,
+    "Technical Setup": 1811
+  },
+  "imbalance_ratio": 5.545554942020983,
+  "weights": {
+    "balanced": {
+      "Billing": 1.4079,
+      "Authentication": 0.8936,
+      "Bug Report": 0.4818,
+      "Feature Request": 1.3869,
+      "Technical Setup": 2.672
+    },
+    "capped_at_4": {
+      "Billing": 1.4079,
+      "Authentication": 0.8936,
+      "Bug Report": 0.4818,
+      "Feature Request": 1.3869,
+      "Technical Setup": 2.672
+    },
+    "eff_n_b999": {
+      "Billing": 0.9813,
+      "Authentication": 0.954,
+      "Bug Report": 0.9498,
+      "Feature Request": 0.9796,
+      "Technical Setup": 1.1352
+    },
+    "eff_n_b99": {
+      "Billing": 1.0,
+      "Authentication": 1.0,
+      "Bug Report": 1.0,
+      "Feature Request": 1.0,
+      "Technical Setup": 1.0
+    }
+  },
+  "logreg_kwargs": {
+    "class_weight": "balanced",
+    "solver": "liblinear",
+    "max_iter": 1000,
+    "random_state": 42
+  },
+  "targets": {
+    "accuracy": 0.88,
+    "macro_f1": 0.8
+  }
+}
