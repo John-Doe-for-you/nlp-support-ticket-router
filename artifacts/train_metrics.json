@@ -1,0 +1,176 @@
+{
+  "train": {
+    "accuracy": 0.9251254797756127,
+    "macro_f1": 0.901934227188281,
+    "weighted_f1": 0.9243302211353479,
+    "per_class": {
+      "Billing": {
+        "precision": 0.9627766599597586,
+        "recall": 0.7958419958419959,
+        "f1": 0.8713862963806055,
+        "support": 2405
+      },
+      "Authentication": {
+        "precision": 0.9067966016991504,
+        "recall": 0.9572672118174624,
+        "f1": 0.9313486462209676,
+        "support": 3791
+      },
+      "Bug Report": {
+        "precision": 0.9530726256983241,
+        "recall": 0.9708351116801821,
+        "f1": 0.9618718725773486,
+        "support": 7029
+      },
+      "Feature Request": {
+        "precision": 0.882120253164557,
+        "recall": 0.9128121162505116,
+        "f1": 0.8972037819352243,
+        "support": 2443
+      },
+      "Technical Setup": {
+        "precision": 0.8512330946698489,
+        "recall": 0.8445146014206788,
+        "f1": 0.8478605388272583,
+        "support": 1267
+      }
+    },
+    "classification_report": {
+      "Billing": {
+        "precision": 0.9627766599597586,
+        "recall": 0.7958419958419959,
+        "f1-score": 0.8713862963806055,
+        "support": 2405.0
+      },
+      "Authentication": {
+        "precision": 0.9067966016991504,
+        "recall": 0.9572672118174624,
+        "f1-score": 0.9313486462209676,
+        "support": 3791.0
+      },
+      "Bug Report": {
+        "precision": 0.9530726256983241,
+        "recall": 0.9708351116801821,
+        "f1-score": 0.9618718725773486,
+        "support": 7029.0
+      },
+      "Feature Request": {
+        "precision": 0.882120253164557,
+        "recall": 0.9128121162505116,
+        "f1-score": 0.8972037819352243,
+        "support": 2443.0
+      },
+      "Technical Setup": {
+        "precision": 0.8512330946698489,
+        "recall": 0.8445146014206788,
+        "f1-score": 0.8478605388272583,
+        "support": 1267.0
+      },
+      "accuracy": 0.9251254797756127,
+      "macro avg": {
+        "precision": 0.9111998470383277,
+        "recall": 0.8962542074021662,
+        "f1-score": 0.901934227188281,
+        "support": 16935.0
+      },
+      "weighted avg": {
+        "precision": 0.9262369872870346,
+        "recall": 0.9251254797756127,
+        "f1-score": 0.9243302211353479,
+        "support": 16935.0
+      }
+    }
+  },
+  "val": {
+    "accuracy": 0.8818181818181818,
+    "macro_f1": 0.8330514167866614,
+    "weighted_f1": 0.8800495316361098,
+    "per_class": {
+      "Billing": {
+        "precision": 0.9250585480093677,
+        "recall": 0.7655038759689923,
+        "f1": 0.8377518557794273,
+        "support": 516
+      },
+      "Authentication": {
+        "precision": 0.8891481913652275,
+        "recall": 0.9384236453201971,
+        "f1": 0.9131216297183943,
+        "support": 812
+      },
+      "Bug Report": {
+        "precision": 0.9245161290322581,
+        "recall": 0.9508958195089582,
+        "f1": 0.9375204448806019,
+        "support": 1507
+      },
+      "Feature Request": {
+        "precision": 0.7981981981981981,
+        "recall": 0.847036328871893,
+        "f1": 0.8218923933209648,
+        "support": 523
+      },
+      "Technical Setup": {
+        "precision": 0.6970954356846473,
+        "recall": 0.6176470588235294,
+        "f1": 0.6549707602339181,
+        "support": 272
+      }
+    },
+    "classification_report": {
+      "Billing": {
+        "precision": 0.9250585480093677,
+        "recall": 0.7655038759689923,
+        "f1-score": 0.8377518557794273,
+        "support": 516.0
+      },
+      "Authentication": {
+        "precision": 0.8891481913652275,
+        "recall": 0.9384236453201971,
+        "f1-score": 0.9131216297183943,
+        "support": 812.0
+      },
+      "Bug Report": {
+        "precision": 0.9245161290322581,
+        "recall": 0.9508958195089582,
+        "f1-score": 0.9375204448806019,
+        "support": 1507.0
+      },
+      "Feature Request": {
+        "precision": 0.7981981981981981,
+        "recall": 0.847036328871893,
+        "f1-score": 0.8218923933209648,
+        "support": 523.0
+      },
+      "Technical Setup": {
+        "precision": 0.6970954356846473,
+        "recall": 0.6176470588235294,
+        "f1-score": 0.6549707602339181,
+        "support": 272.0
+      },
+      "accuracy": 0.8818181818181818,
+      "macro avg": {
+        "precision": 0.8468033004579396,
+        "recall": 0.823901345698714,
+        "f1-score": 0.8330514167866614,
+        "support": 3630.0
+      },
+      "weighted avg": {
+        "precision": 0.8814413126107142,
+        "recall": 0.8818181818181818,
+        "f1-score": 0.8800495316361098,
+        "support": 3630.0
+      }
+    }
+  },
+  "fit_seconds": 64.83275010000216,
+  "n_train": 16935,
+  "n_val": 3630,
+  "classes": [
+    "Authentication",
+    "Billing",
+    "Bug Report",
+    "Feature Request",
+    "Technical Setup"
+  ]
+}
