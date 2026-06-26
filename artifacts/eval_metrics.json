@@ -1,0 +1,488 @@
+{
+  "val": {
+    "accuracy": 0.8818181818181818,
+    "macro_f1": 0.8330514167866614,
+    "weighted_f1": 0.8800495316361098,
+    "per_class": {
+      "Billing": {
+        "precision": 0.9250585480093677,
+        "recall": 0.7655038759689923,
+        "f1": 0.8377518557794273,
+        "support": 516
+      },
+      "Authentication": {
+        "precision": 0.8891481913652275,
+        "recall": 0.9384236453201971,
+        "f1": 0.9131216297183943,
+        "support": 812
+      },
+      "Bug Report": {
+        "precision": 0.9245161290322581,
+        "recall": 0.9508958195089582,
+        "f1": 0.9375204448806019,
+        "support": 1507
+      },
+      "Feature Request": {
+        "precision": 0.7981981981981981,
+        "recall": 0.847036328871893,
+        "f1": 0.8218923933209648,
+        "support": 523
+      },
+      "Technical Setup": {
+        "precision": 0.6970954356846473,
+        "recall": 0.6176470588235294,
+        "f1": 0.6549707602339181,
+        "support": 272
+      }
+    },
+    "confusion_matrix": [
+      [
+        395,
+        59,
+        26,
+        27,
+        9
+      ],
+      [
+        7,
+        762,
+        19,
+        13,
+        11
+      ],
+      [
+        4,
+        14,
+        1433,
+        34,
+        22
+      ],
+      [
+        13,
+        6,
+        30,
+        443,
+        31
+      ],
+      [
+        8,
+        16,
+        42,
+        38,
+        168
+      ]
+    ],
+    "labels": [
+      "Billing",
+      "Authentication",
+      "Bug Report",
+      "Feature Request",
+      "Technical Setup"
+    ],
+    "n": 3630,
+    "name": "val"
+  },
+  "test": {
+    "accuracy": 0.8889807162534435,
+    "macro_f1": 0.8397948257431539,
+    "weighted_f1": 0.8867473096375319,
+    "per_class": {
+      "Billing": {
+        "precision": 0.9152941176470588,
+        "recall": 0.7538759689922481,
+        "f1": 0.8267800212539851,
+        "support": 516
+      },
+      "Authentication": {
+        "precision": 0.8896631823461092,
+        "recall": 0.9433497536945813,
+        "f1": 0.9157202630005977,
+        "support": 812
+      },
+      "Bug Report": {
+        "precision": 0.9318766066838047,
+        "recall": 0.962176509621765,
+        "f1": 0.9467841984982044,
+        "support": 1507
+      },
+      "Feature Request": {
+        "precision": 0.8203266787658802,
+        "recall": 0.864244741873805,
+        "f1": 0.8417132216014898,
+        "support": 523
+      },
+      "Technical Setup": {
+        "precision": 0.7172995780590717,
+        "recall": 0.625,
+        "f1": 0.6679764243614931,
+        "support": 272
+      }
+    },
+    "confusion_matrix": [
+      [
+        389,
+        60,
+        22,
+        36,
+        9
+      ],
+      [
+        7,
+        766,
+        23,
+        6,
+        10
+      ],
+      [
+        2,
+        21,
+        1450,
+        23,
+        11
+      ],
+      [
+        12,
+        4,
+        18,
+        452,
+        37
+      ],
+      [
+        15,
+        10,
+        43,
+        34,
+        170
+      ]
+    ],
+    "labels": [
+      "Billing",
+      "Authentication",
+      "Bug Report",
+      "Feature Request",
+      "Technical Setup"
+    ],
+    "n": 3630,
+    "name": "test"
+  },
+  "latency_ms_per_ticket": 0.47028533338258666,
+  "top_features_per_class": {
+    "Authentication": [
+      {
+        "feature": "login",
+        "coef": 7.667937484051511
+      },
+      {
+        "feature": "security",
+        "coef": 4.531076637844969
+      },
+      {
+        "feature": "breach",
+        "coef": 3.4570837456664454
+      },
+      {
+        "feature": "medical",
+        "coef": 3.127929129357716
+      },
+      {
+        "feature": "access",
+        "coef": 3.1146514877115696
+      },
+      {
+        "feature": "data breach",
+        "coef": 3.0012386790661365
+      },
+      {
+        "feature": "hospital",
+        "coef": 2.469226925615149
+      },
+      {
+        "feature": "login",
+        "coef": 2.265619821949161
+      },
+      {
+        "feature": "ogin",
+        "coef": 2.265619821949161
+      },
+      {
+        "feature": "medical data",
+        "coef": 2.2627146451680002
+      },
+      {
+        "feature": " logi",
+        "coef": 2.2373260665985835
+      },
+      {
+        "feature": "ogin ",
+        "coef": 2.199266496024728
+      },
+      {
+        "feature": "gin ",
+        "coef": 2.0952094820084666
+      },
+      {
+        "feature": "footprint",
+        "coef": 2.030892335021474
+      },
+      {
+        "feature": "ogi",
+        "coef": 2.0268194799676076
+      }
+    ],
+    "Billing": [
+      {
+        "feature": "billing",
+        "coef": 10.10324394848928
+      },
+      {
+        "feature": "payment",
+        "coef": 5.386462156980858
+      },
+      {
+        "feature": "pricing",
+        "coef": 4.405081504641031
+      },
+      {
+        "feature": "the billing",
+        "coef": 3.0691135485411447
+      },
+      {
+        "feature": "bill",
+        "coef": 3.045277816222122
+      },
+      {
+        "feature": " bill",
+        "coef": 3.0370312685879606
+      },
+      {
+        "feature": " bil",
+        "coef": 3.0370312685879606
+      },
+      {
+        "feature": "promote",
+        "coef": 2.9631044864607134
+      },
+      {
+        "feature": "billi",
+        "coef": 2.9174711333929677
+      },
+      {
+        "feature": "illi",
+        "coef": 2.8647383907018265
+      },
+      {
+        "feature": "illin",
+        "coef": 2.8647383907018265
+      },
+      {
+        "feature": " bi",
+        "coef": 2.850026361000889
+      },
+      {
+        "feature": "subscription",
+        "coef": 2.481638538812004
+      },
+      {
+        "feature": "invoice",
+        "coef": 2.454767777805617
+      },
+      {
+        "feature": "charges",
+        "coef": 2.383835624776946
+      }
+    ],
+    "Bug Report": [
+      {
+        "feature": "performance",
+        "coef": 3.731009457819618
+      },
+      {
+        "feature": "outage",
+        "coef": 2.5252196748764892
+      },
+      {
+        "feature": "outages",
+        "coef": 2.4848423607553474
+      },
+      {
+        "feature": "crashes",
+        "coef": 2.227176096940315
+      },
+      {
+        "feature": "service",
+        "coef": 2.226865159159086
+      },
+      {
+        "feature": "problem",
+        "coef": 2.129608674098885
+      },
+      {
+        "feature": "crash",
+        "coef": 2.0992855354431375
+      },
+      {
+        "feature": "downtime",
+        "coef": 2.042035620139616
+      },
+      {
+        "feature": "problem with",
+        "coef": 2.01709050208811
+      },
+      {
+        "feature": "issue",
+        "coef": 1.8981493113639463
+      },
+      {
+        "feature": "traffic",
+        "coef": 1.685135681174466
+      },
+      {
+        "feature": "server",
+        "coef": 1.6766993783864172
+      },
+      {
+        "feature": "software",
+        "coef": 1.674202639835388
+      },
+      {
+        "feature": "issues",
+        "coef": 1.665522607305598
+      },
+      {
+        "feature": "delays",
+        "coef": 1.5999592367599413
+      }
+    ],
+    "Feature Request": [
+      {
+        "feature": "support for",
+        "coef": 7.2400739098018745
+      },
+      {
+        "feature": "enhancement",
+        "coef": 3.767267422918296
+      },
+      {
+        "feature": "integrate",
+        "coef": 3.443954319694803
+      },
+      {
+        "feature": "features",
+        "coef": 3.2072684458770393
+      },
+      {
+        "feature": "integration",
+        "coef": 3.186636942983883
+      },
+      {
+        "feature": "enhancements",
+        "coef": 2.6725667864181735
+      },
+      {
+        "feature": "to integrate",
+        "coef": 2.25246106347456
+      },
+      {
+        "feature": "integration with",
+        "coef": 2.2160794986408527
+      },
+      {
+        "feature": "is it",
+        "coef": 2.0100331146402053
+      },
+      {
+        "feature": "for",
+        "coef": 1.9818653511184183
+      },
+      {
+        "feature": "it possible",
+        "coef": 1.9294294434590726
+      },
+      {
+        "feature": "the integration",
+        "coef": 1.870351235652891
+      },
+      {
+        "feature": "enhancing",
+        "coef": 1.7668273625669848
+      },
+      {
+        "feature": "integration capabilities",
+        "coef": 1.7504812982045481
+      },
+      {
+        "feature": "better",
+        "coef": 1.7031261908338644
+      }
+    ],
+    "Technical Setup": [
+      {
+        "feature": "how to",
+        "coef": 6.298656288847149
+      },
+      {
+        "feature": "documentation",
+        "coef": 5.2228298937954625
+      },
+      {
+        "feature": "how",
+        "coef": 3.908630710239547
+      },
+      {
+        "feature": "on how",
+        "coef": 3.818738997955443
+      },
+      {
+        "feature": "configuration",
+        "coef": 3.6068887926764384
+      },
+      {
+        "feature": "guidelines",
+        "coef": 3.2645737356983133
+      },
+      {
+        "feature": "network configuration",
+        "coef": 3.168387398952452
+      },
+      {
+        "feature": "setup",
+        "coef": 3.0130750094369887
+      },
+      {
+        "feature": "connectivity",
+        "coef": 2.9421169906256703
+      },
+      {
+        "feature": "network",
+        "coef": 2.7760190330521177
+      },
+      {
+        "feature": "disruptions",
+        "coef": 2.581625975183881
+      },
+      {
+        "feature": "configurations",
+        "coef": 2.5788564502917106
+      },
+      {
+        "feature": "documentation for",
+        "coef": 2.507141525266034
+      },
+      {
+        "feature": "integrating",
+        "coef": 2.4830182239955194
+      },
+      {
+        "feature": "guide",
+        "coef": 2.479831045751601
+      }
+    ]
+  },
+  "classes": [
+    "Authentication",
+    "Billing",
+    "Bug Report",
+    "Feature Request",
+    "Technical Setup"
+  ]
+}
