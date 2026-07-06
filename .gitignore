@@ -8,6 +8,7 @@ __pycache__/
 .ruff_cache/
 artifacts/*.joblib
 artifacts/*.pkl
+*.db
 data/raw/
 data/processed/*.csv
 .env
