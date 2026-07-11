@@ -185,9 +185,14 @@ def create_app() -> FastAPI:
             return JSONResponse(status_code=503, content=payload)
         return payload
 
-    # Route modules are mounted on Day 15 (classify) and Day 16
-    # (tickets, stats). Importing them here would pull in Pydantic
-    # models they don't have yet, so the stubs stay empty until then.
+    # Route modules. Day 15 wires up /classify; Day 16 will add
+    # /tickets and /stats. Each router is mounted with its own
+    # ``prefix`` (defined inside the module) so the URLs stay
+    # namespaced cleanly.
+    from ticket_router.api.routes import classify as classify_routes
+
+    app.include_router(classify_routes.router)
+
     return app
 
 
