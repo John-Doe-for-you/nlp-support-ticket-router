@@ -17,6 +17,13 @@ Public API
 * ``list_tickets(session, *, limit, offset)``
     Paginated list of tickets, most recent first.
 
+* ``count_tickets(session)``
+    Total number of ticket rows. Used by the Day 16 history endpoint
+    to populate ``total`` so the client can paginate.
+
+* ``count_predictions(session)``
+    Total number of prediction rows (across all tickets, not deduped).
+
 * ``count_by_column(session, column)``
     Group-by count for any string-ish column on :class:`Prediction`
     (used by the Day 16 ``/stats`` endpoint).
@@ -171,6 +178,28 @@ def count_by_column(session: Session, column) -> dict[str, int]:
     return {row.value: int(row.n) for row in session.execute(stmt).all()}
 
 
+def count_tickets(session: Session) -> int:
+    """Return the total number of ``Ticket`` rows.
+
+    Used by the Day 16 ``GET /tickets`` history endpoint so the
+    client can paginate without an extra round-trip.
+    """
+    stmt = select(func.count()).select_from(Ticket)
+    return int(session.execute(stmt).scalar_one())
+
+
+def count_predictions(session: Session) -> int:
+    """Return the total number of ``Prediction`` rows (across all tickets).
+
+    Note this counts every prediction, including re-runs of the same
+    ticket. ``count_tickets`` is the more useful "how many unique
+    tickets" number; this is the "how many classifications performed"
+    number.
+    """
+    stmt = select(func.count()).select_from(Prediction)
+    return int(session.execute(stmt).scalar_one())
+
+
 def delete_ticket(session: Session, ticket_id: str) -> bool:
     """Delete a ticket (cascades to its predictions). Returns success flag."""
     stmt = delete(Ticket).where(Ticket.ticket_id == ticket_id)
@@ -184,6 +213,8 @@ __all__ = [
     "get_prediction",
     "list_tickets",
     "count_by_column",
+    "count_tickets",
+    "count_predictions",
     "delete_ticket",
     "_split_urgency_signals",
 ]

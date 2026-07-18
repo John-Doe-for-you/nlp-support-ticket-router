@@ -185,13 +185,17 @@ def create_app() -> FastAPI:
             return JSONResponse(status_code=503, content=payload)
         return payload
 
-    # Route modules. Day 15 wires up /classify; Day 16 will add
+    # Route modules. Day 15 wires up /classify; Day 16 adds
     # /tickets and /stats. Each router is mounted with its own
     # ``prefix`` (defined inside the module) so the URLs stay
     # namespaced cleanly.
     from ticket_router.api.routes import classify as classify_routes
+    from ticket_router.api.routes import stats as stats_routes
+    from ticket_router.api.routes import tickets as tickets_routes
 
     app.include_router(classify_routes.router)
+    app.include_router(tickets_routes.router)
+    app.include_router(stats_routes.router)
 
     return app
 

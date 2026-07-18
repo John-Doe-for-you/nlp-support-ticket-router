@@ -15,6 +15,8 @@ from ticket_router.db.database import (
 from ticket_router.db.models import Base, Prediction, Ticket
 from ticket_router.db.repository import (
     count_by_column,
+    count_predictions,
+    count_tickets,
     delete_ticket,
     get_prediction,
     get_ticket,
@@ -36,5 +38,7 @@ __all__ = [
     "get_prediction",
     "list_tickets",
     "count_by_column",
+    "count_tickets",
+    "count_predictions",
     "delete_ticket",
 ]
