@@ -29,6 +29,11 @@ Lifespan responsibilities (PROJECT_PLAN Day 14):
 * Log a one-line startup summary so container logs make the boot
   state obvious at a glance.
 
+Day 17 adds the access-log configuration step: the lifespan is the
+right hook for it because every deployment path (uvicorn, pytest
+``TestClient``, future WSGI/ASGI wrappers) runs the lifespan, so the
+logger tree is always set up before the first request is served.
+
 A failure to load the model does **not** crash the app: ``/health``
 returns 503 with ``model_loaded=False`` and the Day 15 ``/classify``
 endpoint will surface a clean 503. This keeps the API process
@@ -47,6 +52,10 @@ from typing import AsyncIterator
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from ticket_router.api.middleware import (
+    RequestTimingMiddleware,
+    configure_access_logging,
+)
 from ticket_router.config import settings
 from ticket_router.db.database import init_db
 from ticket_router.pipeline.inference import InferencePipeline
@@ -92,6 +101,11 @@ def _load_category_model(pipeline: InferencePipeline, path: str) -> bool:
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     """Application lifespan: warm pipeline + DB on startup, log on shutdown."""
+    # Day 17: configure structured access logging before anything else
+    # so the startup log lines below are emitted in the same format
+    # as per-request log lines.
+    configure_access_logging(settings.log_level)
+
     logger.info(
         "Starting %s v%s (env=%s, log_level=%s)",
         API_TITLE,
@@ -148,6 +162,12 @@ def create_app() -> FastAPI:
         allow_methods=["*"],
         allow_headers=["*"],
     )
+
+    # Day 17: per-request timing + structured access logging. Added
+    # *after* CORS so the timer measures the full handler chain (any
+    # future middleware added between CORS and here will still be
+    # included in the recorded duration).
+    app.add_middleware(RequestTimingMiddleware)
 
     @app.get("/", include_in_schema=False)
     def root() -> dict[str, object]:
