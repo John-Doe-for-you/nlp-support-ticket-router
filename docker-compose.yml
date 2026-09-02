@@ -1,0 +1,15 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=development
+      - LOG_LEVEL=INFO
+      - DATABASE_URL=sqlite:///./tickets.db
+      - CATEGORY_MODEL_PATH=artifacts/category_model.joblib
+      - TFIDF_VECTORIZER_PATH=artifacts/tfidf_vectorizer.joblib
+      - LABEL_ENCODER_PATH=artifacts/label_encoder.joblib
+    volumes:
+      - .:/app
+    working_dir: /app
