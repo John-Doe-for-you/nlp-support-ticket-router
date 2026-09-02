@@ -1,0 +1,30 @@
+{"text": "I can't log in and I've already tried resetting my password three times. This is urgent!", "customer_plan": "pro", "customer_id": "cus_001", "expected_category": "Authentication", "expected_priority": "P1"}
+{"text": "Why was I charged $29.99 instead of $19.99 this month? I have a discount code.", "customer_plan": "free", "customer_id": "cus_002", "expected_category": "Billing", "expected_priority": "P2"}
+{"text": "The app crashes every time I click the 'Export' button on the dashboard.", "customer_plan": "enterprise", "customer_id": "cus_003", "expected_category": "Bug Report", "expected_priority": "P1"}
+{"text": "Would it be possible to add a dark mode to the user interface? My eyes hurt at night.", "customer_plan": "pro", "customer_id": "cus_004", "expected_category": "Feature Request", "expected_priority": "P3"}
+{"text": "I'm having trouble installing the SDK on Windows 11. I keep getting a DLL error.", "customer_plan": "free", "customer_id": "cus_005", "expected_category": "Technical Setup", "expected_priority": "P2"}
+{"text": "I hate this service! Everything is broken and I want a full refund immediately!!", "customer_plan": "pro", "customer_id": "cus_006", "expected_category": "Billing", "expected_priority": "P1"}
+{"text": "My account is locked and I can't get the 2FA code on my phone.", "customer_plan": "enterprise", "customer_id": "cus_007", "expected_category": "Authentication", "expected_priority": "P1"}
+{"text": "Is there a way to integrate this with Slack? I couldn't find any documentation.", "customer_plan": "pro", "customer_id": "cus_008", "expected_category": "Technical Setup", "expected_priority": "P2"}
+{"text": "The search bar isn't returning any results even when I search for existing tickets.", "customer_plan": "free", "customer_id": "cus_009", "expected_category": "Bug Report", "expected_priority": "P2"}
+{"text": "Can we get an API for bulk uploading tickets? It would save us hours of work.", "customer_plan": "enterprise", "customer_id": "cus_010", "expected_category": "Feature Request", "expected_priority": "P2"}
+{"text": "I was charged twice for the same invoice. Please fix this now.", "customer_plan": "pro", "customer_id": "cus_011", "expected_category": "Billing", "expected_priority": "P1"}
+{"text": "I forgot my username and the 'forgot username' link is not sending an email.", "customer_plan": "free", "customer_id": "cus_012", "expected_category": "Authentication", "expected_priority": "P2"}
+{"text": "Every time I upload a CSV, the server returns a 500 Internal Server Error.", "customer_plan": "enterprise", "customer_id": "cus_013", "expected_category": "Bug Report", "expected_priority": "P1"}
+{"text": "I think it would be great if we could customize the dashboard widgets.", "customer_plan": "pro", "customer_id": "cus_014", "expected_category": "Feature Request", "expected_priority": "P3"}
+{"text": "How do I configure the proxy settings for the desktop application?", "customer_plan": "free", "customer_id": "cus_015", "expected_category": "Technical Setup", "expected_priority": "P2"}
+{"text": "I've been waiting for a refund for two weeks. This is unacceptable service.", "customer_plan": "pro", "customer_id": "cus_016", "expected_category": "Billing", "expected_priority": "P1"}
+{"text": "I'm getting a 'Permission Denied' error when trying to access my own settings.", "customer_plan": "enterprise", "customer_id": "cus_017", "expected_category": "Authentication", "expected_priority": "P1"}
+{"text": "The mobile app is lagging significantly on the latest iOS update.", "customer_plan": "free", "customer_id": "cus_018", "expected_category": "Bug Report", "expected_priority": "P2"}
+{"text": "It would be awesome to have a native Mac app instead of using the browser.", "customer_plan": "pro", "customer_id": "cus_019", "expected_category": "Feature Request", "expected_priority": "P3"}
+{"text": "Which port should I open in my firewall to allow the agent to communicate?", "customer_plan": "enterprise", "customer_id": "cus_020", "expected_category": "Technical Setup", "expected_priority": "P2"}
+{"text": "I can't believe I'm paying for this. The billing page is a complete mess!", "customer_plan": "pro", "customer_id": "cus_021", "expected_category": "Billing", "expected_priority": "P2"}
+{"text": "My session expires every 5 minutes. I can't get any work done!", "customer_plan": "enterprise", "customer_id": "cus_022", "expected_category": "Authentication", "expected_priority": "P1"}
+{"text": "The PDF export is cutting off the right margin of the report.", "customer_plan": "free", "customer_id": "cus_023", "expected_category": "Bug Report", "expected_priority": "P3"}
+{"text": "Could you add support for Japanese language in the UI?", "customer_plan": "pro", "customer_id": "cus_024", "expected_category": "Feature Request", "expected_priority": "P3"}
+{"text": "I'm seeing a '403 Forbidden' when trying to connect via the API.", "customer_plan": "enterprise", "customer_id": "cus_025", "expected_category": "Technical Setup", "expected_priority": "P2"}
+{"text": "I need to cancel my subscription immediately. Stop charging me!", "customer_plan": "free", "customer_id": "cus_026", "expected_category": "Billing", "expected_priority": "P1"}
+{"text": "I've tried everything to reset my password but the email never arrives.", "customer_plan": "pro", "customer_id": "cus_027", "expected_category": "Authentication", "expected_priority": "P2"}
+{"text": "The sorting on the ticket list is completely random. It's not alphabetical.", "customer_plan": "enterprise", "customer_id": "cus_028", "expected_category": "Bug Report", "expected_priority": "P2"}
+{"text": "I suggest adding a 'Merge Tickets' feature for duplicate reports.", "customer_plan": "pro", "customer_id": "cus_029", "expected_category": "Feature Request", "expected_priority": "P3"}
+{"text": "Is there a guide for deploying this on an on-premise Kubernetes cluster?", "customer_plan": "enterprise", "customer_id": "cus_030", "expected_category": "Technical Setup", "expected_priority": "P2"}
