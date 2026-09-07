@@ -113,7 +113,6 @@ def test_health_ok_when_ready(isolated_app) -> None:
     # through unchanged.
     assert body["database_url"] == settings.database_url
 
-
 def test_health_503_when_model_artifact_missing(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:

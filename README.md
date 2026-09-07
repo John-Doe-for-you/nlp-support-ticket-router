@@ -72,13 +72,6 @@ Category breakdown (precision/recall/F1):
 - **Feature Request**: 0.86 / 0.88 / 0.87
 - **Technical Setup**: 0.88 / 0.90 / 0.89
 
-## Quickstart
-
-### Docker (recommended)
-
-```powershell
-docker compose up --build
-```
 
 ### Local
 
@@ -87,18 +80,9 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 uvicorn ticket_router.api.main:app --reload
-```
-
-Visit: <http://127.0.0.1:8000/docs>
-
-## Run existing tests
-
-```powershell
-python -m pytest tests/ -x --tb=short
-```
 
 All 530 tests pass.
 
 ---
 
-Built with ❤️ by [Ronak Patil](mailto:ronakpatil2406@gmail.com) — [GitHub](https://github.com/John-Doe-for-you)
+Built by [Ronak Patil](mailto:ronakpatil2406@gmail.com) — [GitHub](https://github.com/John-Doe-for-you)
